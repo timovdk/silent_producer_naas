@@ -1,0 +1,569 @@
+init() - Initializing SR will fetch requested consumer and producer schemas from SR.
+Storing 5 topics: system_timing_control, system_timing, system_topic_access_invite, system_heartbeat, system_logging
+
+Subscribed to topic(s): system_timing_control, system_timing, system_topic_access_invite.
+Consumer is connected
+init() - Initializing SR will fetch requested consumer and producer schemas from SR.
+Storing 5 topics: standard_cap, system_timing, system_topic_access_invite, system_heartbeat, system_logging
+
+Subscribed to topic(s): standard_cap, system_timing, system_topic_access_invite.
+Consumer is connected
+Received CAP message with key {
+  "distributionID": "b3ddd173-ee7d-4911-a9f8-51213c6554c3",
+  "senderID": "TB-TrialMgmt",
+  "dateTimeSent": 1557390213301,
+  "dateTimeExpires": 0,
+  "distributionStatus": "Test",
+  "distributionKind": "Unknown"
+}: {
+  "identifier": "5c119dd0-f81b-49c6-afba-09264180b05e",
+  "sender": "rot@tmt.eu",
+  "sent": "2019-05-09T08:23:33-00:00",
+  "status": "Exercise",
+  "msgType": "Alert",
+  "source": null,
+  "scope": "Public",
+  "restriction": null,
+  "addresses": null,
+  "code": null,
+  "note": null,
+  "references": null,
+  "incidents": null,
+  "info": {
+    "eu.driver.model.cap.Info": {
+      "language": {
+        "string": "en-US"
+      },
+      "category": {
+        "eu.driver.model.cap.Category": "Other"
+      },
+      "event": "Monitor",
+      "responseType": {
+        "eu.driver.model.cap.ResponseType": "None"
+      },
+      "urgency": "Unknown",
+      "severity": "Unknown",
+      "certainty": "Unknown",
+      "audience": null,
+      "eventCode": null,
+      "effective": null,
+      "onset": null,
+      "expires": null,
+      "senderName": {
+        "string": "LCMS - ROT info"
+      },
+      "headline": {
+        "string": "Water levels are rising"
+      },
+      "description": {
+        "string": "Setting the scene"
+      },
+      "instruction": null,
+      "web": null,
+      "contact": null,
+      "parameter": {
+        "array": [
+          {
+            "valueName": "Incident",
+            "value": "<ol>\n<li>Op woensdagavond 22 mei 2019 heeft een NW storm Nederland bereikt.</li>\n<li>Als gevolg van de harde wind, regen en springtij heeft de uitwateringssluis van Scheveningen het begeven. Als gevolg hiervan zijn delen van Den Haag overstroomd.</li>\n<li>Overzichtsbeelden vanuit de lucht zijn te vinden via een geolaag in LCMS. Aanvullend materiaal in de vorm van interactieve PDF’s is als bijlage bovenaan dit veld te vinden of als links onderaan dit veld.</li>\n<li>De doorbraak is gedicht, waardoor de overstroming niet meer zal toenemen.</li>\n<li>Evacuatie van achtergebleven bewoners is opgestart.</li>\n</ol>\n"
+          },
+          {
+            "valueName": "Veiligheid",
+            "value": "<p>Delen van Den Haag zijn overstroomd door een enkele doorbraak bij de uitwateringssluis van Scheveningen.  </p>\n"
+          },
+          {
+            "valueName": "Meteo",
+            "value": "<ul>\n<li>Windrichting: 150 graden</li>\n<li>3 Bft (12-19 km/h; 3-5 m/s)</li>\n<li>Bewolkingsgraad: 3/8 (licht bewolkt)</li>\n<li>Droog</li>\n<li>Luchtvochtigheid: 78%</li>\n</ul>\n"
+          },
+          {
+            "valueName": "Slachtoffers/bevolking",
+            "value": "<ul>\n<li>12.000 inwoners zijn van te voren geëvacueerd</li>\n<li>7.600 inwoners, zo’n 2000 huishoudens, zijn na doorbraak geëvacueerd</li>\n<li>Er is melding van 12 doden en enkele tientallen gewonden, zoals mensen met botbreuken en onderkoeling.</li>\n<li>Er zijn meldingen van mensen die nog altijd vast zitten op de bovenste verdiepingen van hun huizen.</li>\n</ul>\n"
+          }
+        ]
+      },
+      "resource": null,
+      "area": null
+    }
+  }
+}
+Received CAP message with key {
+  "distributionID": "d012dcf2-909f-440c-9e64-6c483c2598ad",
+  "senderID": "TB-TrialMgmt",
+  "dateTimeSent": 1557390237308,
+  "dateTimeExpires": 0,
+  "distributionStatus": "Test",
+  "distributionKind": "Unknown"
+}: {
+  "identifier": "151d9f38-701d-4067-a7e3-242e252d275a",
+  "sender": "htm@crisissuite.com",
+  "sent": "2019-05-09T08:23:57-00:00",
+  "status": "Exercise",
+  "msgType": "Alert",
+  "source": null,
+  "scope": "Public",
+  "restriction": null,
+  "addresses": null,
+  "code": null,
+  "note": null,
+  "references": null,
+  "incidents": null,
+  "info": {
+    "eu.driver.model.cap.Info": {
+      "language": {
+        "string": "en-US"
+      },
+      "category": {
+        "eu.driver.model.cap.Category": "Other"
+      },
+      "event": "Monitor",
+      "responseType": {
+        "eu.driver.model.cap.ResponseType": "None"
+      },
+      "urgency": "Unknown",
+      "severity": "Unknown",
+      "certainty": "Unknown",
+      "audience": null,
+      "eventCode": null,
+      "effective": null,
+      "onset": null,
+      "expires": null,
+      "senderName": {
+        "string": "LCMS - HTM user"
+      },
+      "headline": {
+        "string": "Power outage report"
+      },
+      "description": {
+        "string": "HTM reports a power outage"
+      },
+      "instruction": null,
+      "web": null,
+      "contact": null,
+      "parameter": {
+        "array": [
+          {
+            "valueName": "Incident",
+            "value": "<p>Power outage reported at the main terminal</p>\n"
+          }
+        ]
+      },
+      "resource": null,
+      "area": null
+    }
+  }
+}
+Received CAP message with key {
+  "distributionID": "dca6ae36-1e11-48dd-88ce-48834fdb18fe",
+  "senderID": "tno",
+  "dateTimeSent": 1557415705882,
+  "dateTimeExpires": 0,
+  "distributionStatus": "Test",
+  "distributionKind": "Unknown"
+}: {
+  "identifier": "TRI13970876.2",
+  "sender": "trinet@caltech.edu",
+  "sent": "2003-06-11T20:56:00-07:00",
+  "status": "Actual",
+  "msgType": "Update",
+  "source": null,
+  "scope": "Public",
+  "restriction": null,
+  "addresses": null,
+  "code": null,
+  "note": null,
+  "references": {
+    "string": "trinet@caltech.edu,TRI13970876.1,2003-06-11T20:30:00-07:00"
+  },
+  "incidents": null,
+  "info": {
+    "eu.driver.model.cap.Info": {
+      "language": {
+        "string": "en-US"
+      },
+      "category": {
+        "eu.driver.model.cap.Category": "Geo"
+      },
+      "event": "Earthquake",
+      "responseType": null,
+      "urgency": "Past",
+      "severity": "Minor",
+      "certainty": "Observed",
+      "audience": null,
+      "eventCode": null,
+      "effective": null,
+      "onset": null,
+      "expires": null,
+      "senderName": {
+        "string": "Southern California Seismic Network (TriNet) operated by Caltech and USGS"
+      },
+      "headline": {
+        "string": "EQ 3.4 Imperial County CA"
+      },
+      "description": {
+        "string": "A minor earthquake measuring 3.4 on the Richter scale occurred near Brawley, California at 8:30 PM Pacific Daylight Time on Wednesday, June 11, 2003. (This event has now been reviewed by a seismologist)"
+      },
+      "instruction": null,
+      "web": {
+        "string": "http://www.trinet.org/scsn/scsn.html"
+      },
+      "contact": null,
+      "parameter": {
+        "array": [
+          {
+            "valueName": "EventID",
+            "value": "13970876"
+          },
+          {
+            "valueName": "Version",
+            "value": "1"
+          },
+          {
+            "valueName": "Magnitude",
+            "value": "3.4 Ml"
+          },
+          {
+            "valueName": "Depth",
+            "value": "11.8 mi."
+          },
+          {
+            "valueName": "Quality",
+            "value": "Excellent"
+          }
+        ]
+      },
+      "resource": null,
+      "area": {
+        "eu.driver.model.cap.Area": {
+          "areaDesc": "1 mi. WSW of Schiedam",
+          "polygon": null,
+          "circle": {
+            "string": "51.9525,4.5527 0"
+          },
+          "geocode": null,
+          "altitude": null,
+          "ceiling": null
+        }
+      }
+    }
+  }
+}
+Received CAP message with key {
+  "distributionID": "08546669-c0be-4912-bf4c-e972f098772d",
+  "senderID": "tno",
+  "dateTimeSent": 1557415705880,
+  "dateTimeExpires": 0,
+  "distributionStatus": "Test",
+  "distributionKind": "Unknown"
+}: {
+  "identifier": "KAR0-0306112239-SW",
+  "sender": "KARO@CLETS.DOJ.CA.GOV",
+  "sent": "2003-06-11T22:39:00-07:00",
+  "status": "Actual",
+  "msgType": "Alert",
+  "source": {
+    "string": "SW"
+  },
+  "scope": "Public",
+  "restriction": null,
+  "addresses": null,
+  "code": null,
+  "note": null,
+  "references": null,
+  "incidents": null,
+  "info": {
+    "array": [
+      {
+        "language": {
+          "string": "en-US"
+        },
+        "category": {
+          "eu.driver.model.cap.Category": "Rescue"
+        },
+        "event": "Child Abduction",
+        "responseType": null,
+        "urgency": "Immediate",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "audience": null,
+        "eventCode": {
+          "eu.driver.model.cap.ValueNamePair": {
+            "valueName": "SAME",
+            "value": "CAE"
+          }
+        },
+        "effective": null,
+        "onset": null,
+        "expires": null,
+        "senderName": {
+          "string": "Los Angeles Police Dept - LAPD"
+        },
+        "headline": {
+          "string": "Amber Alert in Los Angeles County"
+        },
+        "description": {
+          "string": "DATE/TIME: 06/11/03, 1915 HRS.  VICTIM(S): KHAYRI DOE JR. M/B BLK/BRO 3'0\", 40 LBS. LIGHT COMPLEXION.  DOB 06/24/01. WEARING RED SHORTS, WHITE T-SHIRT, W/BLUE COLLAR.  LOCATION: 5721 DOE ST., LOS ANGELES, CA.  SUSPECT(S): KHAYRI DOE SR. DOB 04/18/71 M/B, BLK HAIR, BRO EYE. VEHICLE: 81' BUICK 2-DR, BLUE (4XXX000)."
+        },
+        "instruction": null,
+        "web": null,
+        "contact": {
+          "string": "DET. SMITH, 77TH DIV, LOS ANGELES POLICE DEPT-LAPD AT 213 485-2389"
+        },
+        "parameter": null,
+        "resource": null,
+        "area": {
+          "eu.driver.model.cap.Area": {
+            "areaDesc": "Los Angeles County",
+            "polygon": null,
+            "circle": null,
+            "geocode": {
+              "eu.driver.model.cap.ValueNamePair": {
+                "valueName": "SAME",
+                "value": "006037"
+              }
+            },
+            "altitude": null,
+            "ceiling": null
+          }
+        }
+      },
+      {
+        "language": {
+          "string": "es-US"
+        },
+        "category": {
+          "eu.driver.model.cap.Category": "Rescue"
+        },
+        "event": "Abducci�n de Ni�o",
+        "responseType": null,
+        "urgency": "Immediate",
+        "severity": "Severe",
+        "certainty": "Likely",
+        "audience": null,
+        "eventCode": {
+          "eu.driver.model.cap.ValueNamePair": {
+            "valueName": "SAME",
+            "value": "CAE"
+          }
+        },
+        "effective": null,
+        "onset": null,
+        "expires": null,
+        "senderName": {
+          "string": "Departamento de Polic�a de Los �ngeles - LAPD"
+        },
+        "headline": {
+          "string": "Alerta Amber en el condado de Los �ngeles"
+        },
+        "description": {
+          "string": "DATE/TIME: 06/11/03, 1915 HORAS. V�CTIMAS: KHAYRI DOE JR. M/B BLK/BRO 3'0\", 40 LIBRAS. TEZ LIGERA. DOB 06/24/01. CORTOCIRCUITOS ROJOS QUE USAN, CAMISETA BLANCA, COLLAR DE W/BLUE. LOCALIZACI�N: 5721 DOE ST., LOS �NGELES. SOSPECHOSO: KHAYRI DOE ST. DOB 04/18/71 M/B, PELO DEL NEGRO, OJO DE BRO. VEH�CULO: 81' BUICK 2-DR, AZUL (4XXX000)"
+        },
+        "instruction": null,
+        "web": null,
+        "contact": {
+          "string": "DET. SMITH, 77TH DIV, LOS ANGELES POLICE DEPT-LAPD AT 213 485-2389"
+        },
+        "parameter": null,
+        "resource": null,
+        "area": {
+          "eu.driver.model.cap.Area": {
+            "areaDesc": "condado de Los �ngeles",
+            "polygon": null,
+            "circle": null,
+            "geocode": {
+              "eu.driver.model.cap.ValueNamePair": {
+                "valueName": "SAME",
+                "value": "006037"
+              }
+            },
+            "altitude": null,
+            "ceiling": null
+          }
+        }
+      }
+    ]
+  }
+}
+Received CAP message with key {
+  "distributionID": "fa642b19-2c52-4d27-9190-7aec103e6465",
+  "senderID": "tno",
+  "dateTimeSent": 1557415705882,
+  "dateTimeExpires": 0,
+  "distributionStatus": "Test",
+  "distributionKind": "Unknown"
+}: {
+  "identifier": "KSTO1055887203",
+  "sender": "KSTO@NWS.NOAA.GOV",
+  "sent": "2003-06-17T14:57:00-07:00",
+  "status": "Actual",
+  "msgType": "Alert",
+  "source": null,
+  "scope": "Public",
+  "restriction": null,
+  "addresses": null,
+  "code": null,
+  "note": null,
+  "references": null,
+  "incidents": null,
+  "info": {
+    "eu.driver.model.cap.Info": {
+      "language": {
+        "string": "en-US"
+      },
+      "category": {
+        "eu.driver.model.cap.Category": "Met"
+      },
+      "event": "SEVERE THUNDERSTORM",
+      "responseType": {
+        "eu.driver.model.cap.ResponseType": "Shelter"
+      },
+      "urgency": "Immediate",
+      "severity": "Severe",
+      "certainty": "Observed",
+      "audience": null,
+      "eventCode": {
+        "eu.driver.model.cap.ValueNamePair": {
+          "valueName": "SAME",
+          "value": "SVR"
+        }
+      },
+      "effective": null,
+      "onset": null,
+      "expires": {
+        "string": "2003-06-17T16:00:00-07:00"
+      },
+      "senderName": {
+        "string": "NATIONAL WEATHER SERVICE SACRAMENTO CA"
+      },
+      "headline": {
+        "string": "SEVERE THUNDERSTORM WARNING"
+      },
+      "description": {
+        "string": "AT 254 PM PDT...NATIONAL WEATHER SERVICE DOPPLER RADAR INDICATED A SEVERE THUNDERSTORM OVER SOUTH CENTRAL ALPINE COUNTY...OR ABOUT 18 MILES SOUTHEAST OF KIRKWOOD...MOVING SOUTHWEST AT 5 MPH. HAIL...INTENSE RAIN AND STRONG DAMAGING WINDS ARE LIKELY WITH THIS STORM."
+      },
+      "instruction": {
+        "string": "TAKE COVER IN A SUBSTANTIAL SHELTER UNTIL THE STORM PASSES."
+      },
+      "web": null,
+      "contact": {
+        "string": "BARUFFALDI/JUSKIE"
+      },
+      "parameter": null,
+      "resource": null,
+      "area": {
+        "eu.driver.model.cap.Area": {
+          "areaDesc": "EXTREME STORM IN THE HAGUE BEACH AREA",
+          "polygon": {
+            "string": "52.0105704114,4.106228833 52.0105704114,4.124033585 52.1105704114,4.2894033585 52.280317327,4.4794033585 52.240317327,4.2272288334 52.140317327,4.1262288334"
+          },
+          "circle": null,
+          "geocode": {
+            "array": [
+              {
+                "valueName": "SAME",
+                "value": "006109"
+              },
+              {
+                "valueName": "SAME",
+                "value": "006009"
+              },
+              {
+                "valueName": "SAME",
+                "value": "006003"
+              }
+            ]
+          },
+          "altitude": null,
+          "ceiling": null
+        }
+      }
+    }
+  }
+}
+Received CAP message with key {
+  "distributionID": "cdb54777-25cd-4107-9c13-4ad82972b126",
+  "senderID": "tno",
+  "dateTimeSent": 1557415705882,
+  "dateTimeExpires": 0,
+  "distributionStatus": "Test",
+  "distributionKind": "Unknown"
+}: {
+  "identifier": "43b080713727",
+  "sender": "hsas@dhs.gov",
+  "sent": "2003-04-02T14:39:01-05:00",
+  "status": "Actual",
+  "msgType": "Alert",
+  "source": null,
+  "scope": "Public",
+  "restriction": null,
+  "addresses": null,
+  "code": null,
+  "note": null,
+  "references": null,
+  "incidents": null,
+  "info": {
+    "eu.driver.model.cap.Info": {
+      "language": {
+        "string": "en-US"
+      },
+      "category": {
+        "eu.driver.model.cap.Category": "Security"
+      },
+      "event": "Homeland Security Advisory System Update",
+      "responseType": null,
+      "urgency": "Immediate",
+      "severity": "Severe",
+      "certainty": "Likely",
+      "audience": null,
+      "eventCode": null,
+      "effective": null,
+      "onset": null,
+      "expires": null,
+      "senderName": {
+        "string": "U.S. Government, Department of Homeland Security"
+      },
+      "headline": {
+        "string": "Homeland Security Sets Code ORANGE"
+      },
+      "description": {
+        "string": "The Department of Homeland Security has elevated the Homeland Security Advisory System threat level to ORANGE / High in response to intelligence which may indicate a heightened threat of terrorism."
+      },
+      "instruction": {
+        "string": "A High Condition is declared when there is a high risk of terrorist attacks. In addition to the Protective Measures taken in the previous Threat Conditions, Federal departments and agencies should consider agency-specific Protective Measures in accordance with their existing plans."
+      },
+      "web": {
+        "string": "http://www.dhs.gov/dhspublic/display?theme=29"
+      },
+      "contact": null,
+      "parameter": {
+        "eu.driver.model.cap.ValueNamePair": {
+          "valueName": "HSAS",
+          "value": "ORANGE"
+        }
+      },
+      "resource": {
+        "eu.driver.model.cap.Resource": {
+          "resourceDesc": "Image file (GIF)",
+          "size": null,
+          "uri": {
+            "string": "http://www.dhs.gov/dhspublic/getAdvisoryImage"
+          },
+          "mimeType": {
+            "string": "image/gif"
+          },
+          "deferUri": null,
+          "digest": null
+        }
+      },
+      "area": {
+        "eu.driver.model.cap.Area": {
+          "areaDesc": "U.S. nationwide and interests worldwide",
+          "polygon": null,
+          "circle": null,
+          "geocode": null,
+          "altitude": null,
+          "ceiling": null
+        }
+      }
+    }
+  }
+}
