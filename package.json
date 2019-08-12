@@ -7,8 +7,10 @@
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
-    "produce": "node dist/producer.js",
-    "consume": "node dist/consumer.js"
+    "build:docker": "docker build -t silent-producer .",
+    "producer": "node dist/producer.js",
+    "silent-produce": "node dist/silent-producer.js",
+    "consumer": "node dist/consumer.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.7",
-    "@types/node": "^12.0.0"
+    "@types/node": "^12.0.0",
+    "typescript": "3.4.5"
   }
 }
