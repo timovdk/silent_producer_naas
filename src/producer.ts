@@ -40,7 +40,7 @@ class Producer {
       // autoRegisterSchemas: false,
       wrapUnions: 'auto',
       schemaFolder: `${process.cwd()}/src/schemas`,
-      produce: ['standard_cap', 'standard_geojson', TimeTopic],
+      produce: ['standard_cap', 'standard_geojson', 'system_request_change_of_trial_stage', TimeTopic],
       logging: {
         logToConsole: LogLevel.Info,
         logToKafka: LogLevel.Warn,
@@ -50,7 +50,8 @@ class Producer {
     this.adapter.on('ready', () => {
       log.info(`Current simulation time: ${this.adapter.trialTime}`);
       log.info('Producer is connected');
-      this.sendCap();
+      this.sendStageChangeRequest();
+      // this.sendCap();
       // this.sendGeoJSON();
       // this.sendTime();
       // this.uploadFile();
@@ -58,6 +59,27 @@ class Producer {
     this.adapter.connect();
   }
 
+  private sendStageChangeRequest() {
+    const payloads: ProduceRequest[] = [
+      {
+        topic: 'system_request_change_of_trial_stage',
+        messages: {
+          // ostTrialId: 1,
+          ostTrialSessionId: 1,
+          ostTrialStageId: 1,
+        },
+        attributes: 1, // Gzip
+      },
+    ];
+    this.adapter.send(payloads, (error, data) => {
+      if (error) {
+        log.error(error);
+      }
+      if (data) {
+        log.info(data);
+      }
+    });
+  }
   // private sendGeoJSON() {
   //   const geojson = geojsonToAvro((crowdTaskerMsg as unknown) as FeatureCollection);
   //   const payloads: ProduceRequest[] = [
