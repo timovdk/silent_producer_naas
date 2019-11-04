@@ -10,7 +10,8 @@
     "build:docker": "docker build -t silent-producer .",
     "producer": "node dist/producer.js",
     "silent-produce": "node dist/silent-producer.js",
-    "consumer": "node dist/consumer.js"
+    "consumer": "node dist/consumer.js",
+	"update_kafka_schemas": "update_kafka_schemas.bat"
   },
   "repository": {
     "type": "git",
