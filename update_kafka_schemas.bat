@@ -7,4 +7,5 @@ xcopy .\avro-schemas\edxl-de .\edxl-de /s /e /y
 xcopy .\avro-schemas\sim .\sim /s /e /y
 xcopy .\avro-schemas\standard .\standard /s /e /y
 xcopy .\avro-schemas\sumo .\sumo /s /e /y
+rmdir .\avro-schemas /s /q
 pause
