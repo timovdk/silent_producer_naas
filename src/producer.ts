@@ -47,7 +47,7 @@ class Producer {
       autoRegisterSchemas: true,
       // autoRegisterSchemas: false,
       wrapUnions: 'auto',
-      schemaFolder: `${process.cwd()}/src/schemas`,
+      schemaFolder: process.env.SCHEMA_FOLDER || `${process.cwd()}/src/schemas`,
       produce: [
         'standard_cap',
         'standard_geojson',

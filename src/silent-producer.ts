@@ -1,10 +1,4 @@
-import * as path from 'path';
-import {
-  TestBedAdapter,
-  Logger,
-  LogLevel,
-  TimeTopic,
-} from 'node-test-bed-adapter';
+import { TestBedAdapter, Logger, LogLevel } from 'node-test-bed-adapter';
 
 const log = Logger.instance;
 
@@ -35,13 +29,20 @@ class SilentProducer {
         : undefined,
       logging: {
         logToConsole: LogLevel.Info,
+        logToKafka: LogLevel.Info,
       },
     });
     this.adapter.on('error', e => console.error(e));
-    this.adapter.on('ready', () => {
-      log.info(
-        'Silent producer has finished publishing all schemas. Exiting...'
+    this.adapter.on('ready', async () => {
+      const createdTopics = await this.adapter.createTopics(
+        this.adapter.uploadedSchemas
       );
+      log.info(
+        `Created the following topics:\n${createdTopics
+          .map(t => `- ${t}`)
+          .join('\n')}\n`
+      );
+      log.info('Exiting...');
       process.exit(0);
     });
     this.adapter.connect();

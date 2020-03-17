@@ -1,5 +1,5 @@
 dependencies:
-  node-test-bed-adapter: 0.9.5
+  node-test-bed-adapter: 0.9.7
 devDependencies:
   '@types/geojson': 7946.0.7
   '@types/node': 13.9.1
@@ -435,7 +435,7 @@ packages:
     optional: true
     resolution:
       integrity: sha512-1/aa2clS0pue0HjckL62CsbhWWU35HARvBDXcJtYKbYR7LnIutmpxmXbuDMV9kEviD2lP/wACOgWmmwljghHyQ==
-  /node-test-bed-adapter/0.9.5:
+  /node-test-bed-adapter/0.9.7:
     dependencies:
       '@types/bluebird': 3.5.30
       avsc: 5.4.19
@@ -443,11 +443,11 @@ packages:
       bluebird: 3.7.2
       form-data: 3.0.0
       kafka-node: 5.0.0
-      test-bed-schemas: 0.3.1
+      test-bed-schemas: 0.3.2
       url: 0.11.0
     dev: false
     resolution:
-      integrity: sha512-OVO3oyNqgBMxmZ0Tm4jam0J98QYL1cYpxsSKpNUKs5oZhFdM7EUH9Cqr57xHkKhuHwASjiX0clrnq9d6DjepPg==
+      integrity: sha512-g4GdPaYuSY9v0/9+Dg82O6IsFqL2Tfuslx1XT6KtejGpSxrs1pzpeEwoevZ45wZUmeavWEnodVX6vV+jo4TLqg==
   /noop-logger/0.1.1:
     dev: false
     optional: true
@@ -698,10 +698,10 @@ packages:
     optional: true
     resolution:
       integrity: sha512-rzS0heiNf8Xn7/mpdSVVSMAWAoy9bfb1WOTYC78Z0UQKeKa/CWS8FOq0lKGNa8DWKAn9gxjCvMLYc5PGXYlK2A==
-  /test-bed-schemas/0.3.1:
+  /test-bed-schemas/0.3.2:
     dev: false
     resolution:
-      integrity: sha512-kSgvy4s8f2r8AkQnH8wt5BwFqzgHkEtSe9iVyOm10rgu9vjiYBPqJy0kt3LN2xhjqGPotCTf5LCFWDwUuAfkxg==
+      integrity: sha512-D86C6uuSocnvxIN1X5R13HUxAHxkfkLEUHlBv1QBslmIUw6QXZxHxKZxlTYy5WeCCk9p35Bkw2MJ8Argjmha4A==
   /to-buffer/1.1.1:
     dev: false
     optional: true
@@ -768,5 +768,5 @@ packages:
 specifiers:
   '@types/geojson': ^7946.0.7
   '@types/node': ^13.9.1
-  node-test-bed-adapter: ^0.9.5
+  node-test-bed-adapter: ^0.9.7
   typescript: 3.8.3
