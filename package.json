@@ -31,11 +31,11 @@
   },
   "homepage": "https://github.com/DRIVER-EU/example-node-test-bed-adapter#readme",
   "dependencies": {
-    "node-test-bed-adapter": "^0.8.7"
+    "node-test-bed-adapter": "^0.9.5"
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.7",
-    "@types/node": "^12.0.0",
-    "typescript": "3.4.5"
+    "@types/node": "^13.9.1",
+    "typescript": "3.8.3"
   }
 }

@@ -1,14 +1,8 @@
 import * as path from 'path';
-import { FeatureCollection } from 'geojson';
 import {
   TestBedAdapter,
   Logger,
   LogLevel,
-  ProduceRequest,
-  largeFileUploadCallback,
-  DataType,
-  ITiming,
-  TimeState,
   TimeTopic,
 } from 'node-test-bed-adapter';
 
@@ -33,19 +27,22 @@ class SilentProducer {
       fetchAllSchemas: false,
       fetchAllVersions: false,
       autoRegisterSchemas: true,
-      // autoRegisterSchemas: false,
+      autoRegisterDefaultSchemas: false,
       wrapUnions: 'auto',
-      schemaFolder: `${process.cwd()}/src/schemas`,
-      produce: process.env.PRODUCE_TOPICS ? process.env.PRODUCE_TOPICS.split(',') : ['standard_cap', 'standard_geojson', TimeTopic],
+      schemaFolder: process.env.SCHEMA_FOLDER || `${process.cwd()}/src/schemas`,
+      produce: process.env.PRODUCE_TOPICS
+        ? process.env.PRODUCE_TOPICS.split(',')
+        : undefined,
       logging: {
         logToConsole: LogLevel.Info,
-        logToKafka: LogLevel.Warn,
       },
     });
     this.adapter.on('error', e => console.error(e));
     this.adapter.on('ready', () => {
-      log.info(`Current simulation time: ${this.adapter.trialTime}`);
-      log.info('Producer is connected');
+      log.info(
+        'Silent producer has finished publishing all schemas. Exiting...'
+      );
+      process.exit(0);
     });
     this.adapter.connect();
   }
