@@ -22,9 +22,17 @@ npm run build
 ## Docker
 
 ```bash
-npm run docker:build
+npm run docker:silentproducer:build
 ```
-This will create a docker image with the name 'silent-producer'. See the ```docker-compose.yml``` for an example service configuration to add in your test-bed composition.
+This will create a docker local image with the name 'silent-producer'. See the ```docker-compose.yml``` for an example service configuration to add in your test-bed composition. 
+
+To publish the local docker image to drivereu dockerhub:
+```bash
+docker login --username=kluiverjh
+npm run docker:silentproducer:build
+npm run docker:silentproducer:tag
+npm run docker:silentproducer:publish
+```
 
 ## Usage
 
