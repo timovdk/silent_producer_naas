@@ -1,8 +1,8 @@
 dependencies:
-  node-test-bed-adapter: 0.9.7
+  node-test-bed-adapter: 2.0.0
 devDependencies:
   '@types/geojson': 7946.0.7
-  '@types/node': 13.9.1
+  '@types/node': 13.9.2
   typescript: 3.8.3
 lockfileVersion: 5.1
 packages:
@@ -14,10 +14,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wE2v81i4C4Ol09RtsWFAqg3BUitWbHSpSlIo+bNdsCJijO9sjme+zm+73ZMCa/qMC8UEERxzGbvmr1cffo2SiQ==
-  /@types/node/13.9.1:
+  /@types/node/13.9.2:
     dev: true
     resolution:
-      integrity: sha512-E6M6N0blf/jiZx8Q3nb0vNaswQeEyn0XlupO+xN6DtJ6r6IT4nXrTry7zhIfYvFCl3/8Cu6WIysmUBKiqV0bqQ==
+      integrity: sha512-bnoqK579sAYrQbp73wwglccjJ4sfRdKU7WNEZ5FW4K2U6Kc0/eZ5kvXG0JKsEKFB50zrFmfFt52/cvBbZa7eXg==
   /ansi-regex/2.1.1:
     dev: false
     engines:
@@ -435,7 +435,7 @@ packages:
     optional: true
     resolution:
       integrity: sha512-1/aa2clS0pue0HjckL62CsbhWWU35HARvBDXcJtYKbYR7LnIutmpxmXbuDMV9kEviD2lP/wACOgWmmwljghHyQ==
-  /node-test-bed-adapter/0.9.7:
+  /node-test-bed-adapter/2.0.0:
     dependencies:
       '@types/bluebird': 3.5.30
       avsc: 5.4.19
@@ -443,11 +443,11 @@ packages:
       bluebird: 3.7.2
       form-data: 3.0.0
       kafka-node: 5.0.0
-      test-bed-schemas: 0.3.2
+      test-bed-schemas: 0.3.4
       url: 0.11.0
     dev: false
     resolution:
-      integrity: sha512-g4GdPaYuSY9v0/9+Dg82O6IsFqL2Tfuslx1XT6KtejGpSxrs1pzpeEwoevZ45wZUmeavWEnodVX6vV+jo4TLqg==
+      integrity: sha512-tQP2/M6ahsdvuNhEEQVI9EAVBREo6XdyLac5oT6Y/Wm9ETq9zgzQq1Er8pJZyp4AtO7FM74QfOVYmjCfrmag4g==
   /noop-logger/0.1.1:
     dev: false
     optional: true
@@ -698,10 +698,10 @@ packages:
     optional: true
     resolution:
       integrity: sha512-rzS0heiNf8Xn7/mpdSVVSMAWAoy9bfb1WOTYC78Z0UQKeKa/CWS8FOq0lKGNa8DWKAn9gxjCvMLYc5PGXYlK2A==
-  /test-bed-schemas/0.3.2:
+  /test-bed-schemas/0.3.4:
     dev: false
     resolution:
-      integrity: sha512-D86C6uuSocnvxIN1X5R13HUxAHxkfkLEUHlBv1QBslmIUw6QXZxHxKZxlTYy5WeCCk9p35Bkw2MJ8Argjmha4A==
+      integrity: sha512-+oYeAeZWAhxsoNvbHXWWXV9+8Z237PNjCpiiDwehrOEK7KewkQbOSWa0iodat43UY4iNrL77lyMbHps2aO4sZQ==
   /to-buffer/1.1.1:
     dev: false
     optional: true
@@ -767,6 +767,6 @@ packages:
       integrity: sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
 specifiers:
   '@types/geojson': ^7946.0.7
-  '@types/node': ^13.9.1
-  node-test-bed-adapter: ^0.9.7
+  '@types/node': ^13.9.2
+  node-test-bed-adapter: ^2.0.0
   typescript: 3.8.3
