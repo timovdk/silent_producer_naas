@@ -1,5 +1,5 @@
 dependencies:
-  node-test-bed-adapter: 2.0.4
+  node-test-bed-adapter: 2.0.5
 devDependencies:
   '@types/geojson': 7946.0.7
   '@types/node': 13.9.3
@@ -416,7 +416,7 @@ packages:
     optional: true
     resolution:
       integrity: sha512-FeLpTS0F39U7hHZU1srAK4Vx+5AHNVOTP+hxBNQknR/54laTHSFIJkDWDqiquY1LeLUgTfPN7sLPhMubx0PLAg==
-  /node-test-bed-adapter/2.0.4:
+  /node-test-bed-adapter/2.0.5:
     dependencies:
       '@types/bluebird': 3.5.30
       avsc: 5.4.19
@@ -428,7 +428,7 @@ packages:
       url: 0.11.0
     dev: false
     resolution:
-      integrity: sha512-IzjyUUMvqeS8OK/ZHzSvdT3n+cE/dRxiRUD/o51LMNGbIwGHV5yrB5SA4XOS7MZlbTpitz0W6MMpRT+HqNTuHg==
+      integrity: sha512-KFAbujLBP6UQubtbKbxdXKNFRdCJyo/MdRxTmQUXgKw60yRfgWBw1kxQ6wJaG3Enc+cWsNxKbfAmX4JsUKCOUw==
   /noop-logger/0.1.1:
     dev: false
     optional: true
@@ -720,5 +720,5 @@ packages:
 specifiers:
   '@types/geojson': ^7946.0.7
   '@types/node': ^13.9.3
-  node-test-bed-adapter: ^2.0.4
+  node-test-bed-adapter: ^2.0.5
   typescript: 3.8.3

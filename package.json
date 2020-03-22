@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/DRIVER-EU/example-node-test-bed-adapter#readme",
   "dependencies": {
-    "node-test-bed-adapter": "^2.0.4"
+    "node-test-bed-adapter": "^2.0.5"
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.7",

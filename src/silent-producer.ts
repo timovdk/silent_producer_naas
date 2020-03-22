@@ -24,9 +24,6 @@ class SilentProducer {
       autoRegisterDefaultSchemas: false,
       wrapUnions: 'auto',
       schemaFolder: process.env.SCHEMA_FOLDER || `${process.cwd()}/src/schemas`,
-      produce: process.env.PRODUCE_TOPICS
-        ? process.env.PRODUCE_TOPICS.split(',')
-        : undefined,
       logging: {
         logToConsole: LogLevel.Info,
         logToKafka: LogLevel.Info,
