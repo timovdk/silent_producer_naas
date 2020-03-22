@@ -39,6 +39,7 @@ class SilentProducer {
       );
       log.info(
         `Created the following topics:\n${createdTopics
+          .sort()
           .map(t => `- ${t}`)
           .join('\n')}\n`
       );
