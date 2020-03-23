@@ -1,5 +1,5 @@
 dependencies:
-  node-test-bed-adapter: 2.0.5
+  node-test-bed-adapter: 2.0.7
 devDependencies:
   '@types/geojson': 7946.0.7
   '@types/node': 13.9.3
@@ -383,14 +383,15 @@ packages:
     optional: true
     resolution:
       integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
-  /mkdirp/0.5.3:
+  /mkdirp/0.5.4:
     dependencies:
       minimist: 1.2.5
+    deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
     dev: false
     hasBin: true
     optional: true
     resolution:
-      integrity: sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==
+      integrity: sha512-iG9AK/dJLtJ0XNgTuDbSyNS3zECqDlAhnQW4CsNxBG3LQJBbHmRX1egw39DmtOdCAqY+dKXV+sgPgilNWUKMVw==
   /ms/2.0.0:
     dev: false
     resolution:
@@ -416,7 +417,7 @@ packages:
     optional: true
     resolution:
       integrity: sha512-FeLpTS0F39U7hHZU1srAK4Vx+5AHNVOTP+hxBNQknR/54laTHSFIJkDWDqiquY1LeLUgTfPN7sLPhMubx0PLAg==
-  /node-test-bed-adapter/2.0.5:
+  /node-test-bed-adapter/2.0.7:
     dependencies:
       '@types/bluebird': 3.5.30
       avsc: 5.4.19
@@ -424,11 +425,11 @@ packages:
       bluebird: 3.7.2
       form-data: 3.0.0
       kafka-node: 5.0.0
-      test-bed-schemas: 0.3.5
+      test-bed-schemas: 0.3.8
       url: 0.11.0
     dev: false
     resolution:
-      integrity: sha512-KFAbujLBP6UQubtbKbxdXKNFRdCJyo/MdRxTmQUXgKw60yRfgWBw1kxQ6wJaG3Enc+cWsNxKbfAmX4JsUKCOUw==
+      integrity: sha512-xJmFrrhCYs83DD8ymdDZAxSg0Yq8ivIG1/c3Tb4ZlSw5FU9zyJ1atba+PKhhz1Lh3jqgkiVvvLeuM7jYwZarxg==
   /noop-logger/0.1.1:
     dev: false
     optional: true
@@ -475,7 +476,7 @@ packages:
       expand-template: 2.0.3
       github-from-package: 0.0.0
       minimist: 1.2.5
-      mkdirp: 0.5.3
+      mkdirp: 0.5.4
       napi-build-utils: 1.0.2
       node-abi: 2.15.0
       noop-logger: 0.1.1
@@ -644,7 +645,7 @@ packages:
   /tar-fs/2.0.0:
     dependencies:
       chownr: 1.1.4
-      mkdirp: 0.5.3
+      mkdirp: 0.5.4
       pump: 3.0.0
       tar-stream: 2.1.2
     dev: false
@@ -662,10 +663,10 @@ packages:
     optional: true
     resolution:
       integrity: sha512-UaF6FoJ32WqALZGOIAApXx+OdxhekNMChu6axLJR85zMMjXKWFGjbIRe+J6P4UnRGg9rAwWvbTT0oI7hD/Un7Q==
-  /test-bed-schemas/0.3.5:
+  /test-bed-schemas/0.3.8:
     dev: false
     resolution:
-      integrity: sha512-HDHJplqwipeVV/B9poYtEQrx5f4osvnBB0VVs//0HHflBw5W9PqzH91iqfxZ2XuzKiCk03olyxXRoM5KlofH8g==
+      integrity: sha512-h3sZ8uF/K2T+yO7E+OE6gFN0htDMlQejhMBFk4lWNbAIH7VfwIxwHSVNpgdzmzkedPDWCsc6I3RGwz2TN0zdLA==
   /traverse/0.3.9:
     dev: false
     resolution:
@@ -720,5 +721,5 @@ packages:
 specifiers:
   '@types/geojson': ^7946.0.7
   '@types/node': ^13.9.3
-  node-test-bed-adapter: ^2.0.5
+  node-test-bed-adapter: ^2.0.7
   typescript: 3.8.3

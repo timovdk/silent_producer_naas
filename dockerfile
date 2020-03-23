@@ -16,11 +16,11 @@ RUN npm run build
 
 FROM node:12-alpine
 RUN mkdir -p /app
-COPY ./src/schemas /src/schemas
-COPY ./package.json /app/package.json
-COPY --from=builder /code/dist /app
-COPY package.json /app/package.json
-# COPY --from=builder /code/node_modules /app/node_modules
 WORKDIR /app
+COPY ./src/schemas ./src/schemas
+COPY ./package.json ./package.json
+COPY --from=builder /code/dist .
+COPY package.json ./package.json
+# COPY --from=builder /code/node_modules /app/node_modules
 RUN npm i --only=prod
 CMD ["node", "silent-producer.js"]
