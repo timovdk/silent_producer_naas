@@ -7,7 +7,7 @@
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
-    "docker": "npm run docker:silentproducer:build && npm run docker:silentproducer:tag && npm run docker:silentproducer:publish",
+    "docker": "npm run docker:build:silentproducer && npm run docker:tag:silentproducer && npm run docker:publish:silentproducer",
     "producer": "node dist/producer.js",
     "silent-produce": "node dist/silent-producer.js",
     "consumer": "node dist/consumer.js",
