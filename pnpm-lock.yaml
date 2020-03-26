@@ -1,8 +1,8 @@
 dependencies:
-  node-test-bed-adapter: 2.0.7
+  node-test-bed-adapter: 2.0.8
 devDependencies:
   '@types/geojson': 7946.0.7
-  '@types/node': 13.9.3
+  '@types/node': 13.9.4
   typescript: 3.8.3
 lockfileVersion: 5.1
 packages:
@@ -14,10 +14,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-wE2v81i4C4Ol09RtsWFAqg3BUitWbHSpSlIo+bNdsCJijO9sjme+zm+73ZMCa/qMC8UEERxzGbvmr1cffo2SiQ==
-  /@types/node/13.9.3:
+  /@types/node/13.9.4:
     dev: true
     resolution:
-      integrity: sha512-01s+ac4qerwd6RHD+mVbOEsraDHSgUaefQlEdBbUolnQFjKwCr7luvAlEwW1RFojh67u0z4OUTjPn9LEl4zIkA==
+      integrity: sha512-uzaaDXey/NI2l7kU+xCgWu852Dh/zmf6ZKApc0YQEQpY4DaiZFmLN29E6SLHJfSedj3iNWAndSwfSBpEDadJfg==
   /ansi-regex/2.1.1:
     dev: false
     engines:
@@ -383,6 +383,11 @@ packages:
     optional: true
     resolution:
       integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  /mkdirp-classic/0.5.2:
+    dev: false
+    optional: true
+    resolution:
+      integrity: sha512-ejdnDQcR75gwknmMw/tx02AuRs8jCtqFoFqDZMjiNxsu85sRIJVXDKHuLYvUUPRBUtV2FpSZa9bL1BUa3BdR2g==
   /mkdirp/0.5.4:
     dependencies:
       minimist: 1.2.5
@@ -417,7 +422,7 @@ packages:
     optional: true
     resolution:
       integrity: sha512-FeLpTS0F39U7hHZU1srAK4Vx+5AHNVOTP+hxBNQknR/54laTHSFIJkDWDqiquY1LeLUgTfPN7sLPhMubx0PLAg==
-  /node-test-bed-adapter/2.0.7:
+  /node-test-bed-adapter/2.0.8:
     dependencies:
       '@types/bluebird': 3.5.30
       avsc: 5.4.19
@@ -429,7 +434,7 @@ packages:
       url: 0.11.0
     dev: false
     resolution:
-      integrity: sha512-xJmFrrhCYs83DD8ymdDZAxSg0Yq8ivIG1/c3Tb4ZlSw5FU9zyJ1atba+PKhhz1Lh3jqgkiVvvLeuM7jYwZarxg==
+      integrity: sha512-OpQ6OKkoNbzgOd0QJ2qZxozpNHPaaSTwCcBQhu3Imeqe63Av6eQbGK/Z/+WcqmL22lMSMlJSFZpOxcJq/w2ZIw==
   /noop-logger/0.1.1:
     dev: false
     optional: true
@@ -484,7 +489,7 @@ packages:
       pump: 3.0.0
       rc: 1.2.8
       simple-get: 3.1.0
-      tar-fs: 2.0.0
+      tar-fs: 2.0.1
       tunnel-agent: 0.6.0
       which-pm-runs: 1.0.0
     dev: false
@@ -642,16 +647,16 @@ packages:
     optional: true
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
-  /tar-fs/2.0.0:
+  /tar-fs/2.0.1:
     dependencies:
       chownr: 1.1.4
-      mkdirp: 0.5.4
+      mkdirp-classic: 0.5.2
       pump: 3.0.0
       tar-stream: 2.1.2
     dev: false
     optional: true
     resolution:
-      integrity: sha512-vaY0obB6Om/fso8a8vakQBzwholQ7v5+uy+tF3Ozvxv1KNezmVQAiWtcNmMHFSFPqL3dJA8ha6gdtFbfX9mcxA==
+      integrity: sha512-6tzWDMeroL87uF/+lin46k+Q+46rAJ0SyPGz7OW7wTgblI273hsBqk2C1j0/xNadNLKDTUL9BukSjB7cwgmlPA==
   /tar-stream/2.1.2:
     dependencies:
       bl: 4.0.2
@@ -720,6 +725,6 @@ packages:
       integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 specifiers:
   '@types/geojson': ^7946.0.7
-  '@types/node': ^13.9.3
-  node-test-bed-adapter: ^2.0.7
+  '@types/node': ^13.9.4
+  node-test-bed-adapter: ^2.0.8
   typescript: 3.8.3
