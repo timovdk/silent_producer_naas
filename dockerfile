@@ -1,14 +1,26 @@
-FROM node:11-alpine as builder
+# Creates the Silent-producer, uploading all AVRO schemas to the Kafka schema registry.
+#
+# You can access the container using:
+#   docker run -it silent-producer sh
+# To start it stand-alone:
+#   docker run -it silent-producer
+
+FROM node:12-alpine as builder
 RUN mkdir -p ./code
 COPY package.json /code/package.json
 WORKDIR /code
-RUN yarn
-COPY . .
-RUN yarn build
+RUN npm i
+COPY ./tsconfig.json .
+COPY ./src/silent-producer.ts ./src/silent-producer.ts
+RUN npm run build
 
-FROM node:11-alpine
-RUN mkdir -p /node_adapter
-COPY --from=builder /code/dist /node_adapter/dist
-COPY --from=builder /code/src/schemas /src/schemas
-COPY --from=builder /code/node_modules /node_adapter/node_modules
-CMD ["node", "/node_adapter/dist/silent-producer.js"]
+FROM node:12-alpine
+RUN mkdir -p /app
+WORKDIR /app
+COPY ./src/schemas ./src/schemas
+COPY ./package.json ./package.json
+COPY --from=builder /code/dist .
+COPY package.json ./package.json
+# COPY --from=builder /code/node_modules /app/node_modules
+RUN npm i --only=prod
+CMD ["node", "silent-producer.js"]

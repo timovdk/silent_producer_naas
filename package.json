@@ -1,20 +1,22 @@
 {
   "name": "example-node-test-bed-adapter",
-  "version": "0.0.2",
+  "version": "2.0.8",
   "description": "An example project of how to use the node-test-bed-adapter",
   "main": "dist/producer.js",
   "typings": "dist/producer.d.ts",
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
-    "build:docker": "docker build -t silent-producer .",
+    "docker": "npm run docker:build:silentproducer && npm run docker:tag:silentproducer && npm run docker:publish:silentproducer && npm run docker:tag:silentproducer:latest && npm run docker:publish:silentproducer:latest",
     "producer": "node dist/producer.js",
     "silent-produce": "node dist/silent-producer.js",
     "consumer": "node dist/consumer.js",
     "update_kafka_schemas": "update_kafka_schemas.bat",
-    "docker:silentproducer:build": "docker build -t silent-producer .",
-    "docker:silentproducer:tag": "docker tag silent-producer drivereu/silent-producer",
-    "docker:silentproducer:publish": "docker push drivereu/silent-producer"
+    "docker:build:silentproducer": "docker build -t silent-producer .",
+    "docker:tag:silentproducer": "docker tag silent-producer drivereu/silent-producer:2.0.8",
+    "docker:tag:silentproducer:latest": "docker tag silent-producer drivereu/silent-producer:latest",
+    "docker:publish:silentproducer": "docker push drivereu/silent-producer:2.0.8",
+    "docker:publish:silentproducer:latest": "docker push drivereu/silent-producer:latest"
   },
   "repository": {
     "type": "git",
@@ -35,11 +37,11 @@
   },
   "homepage": "https://github.com/DRIVER-EU/example-node-test-bed-adapter#readme",
   "dependencies": {
-    "node-test-bed-adapter": "^0.8.7"
+    "node-test-bed-adapter": "^2.0.8"
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.7",
-    "@types/node": "^12.0.0",
-    "typescript": "3.4.5"
+    "@types/node": "^13.9.4",
+    "typescript": "3.8.3"
   }
 }
