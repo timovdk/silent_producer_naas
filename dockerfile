@@ -6,6 +6,8 @@
 #   docker run -it silent-producer
 
 FROM node:12-alpine as builder
+# Install yarn and other dependencies via apk
+RUN apk update && apk add yarn python make g++ && rm -rf /var/cache/apk/*
 RUN mkdir -p ./code
 COPY package.json /code/package.json
 WORKDIR /code
