@@ -2,7 +2,7 @@
 	"type" : "record",
 	"name" : "TaskStatusReport",
 	"namespace" : "nl.ras.netn_etr",
-	"doc" : "Version 01/03/2020: A report about the status of a task the unit was ordered to execute.",
+	"doc" : "Version 30 april 2020; schema owner https://ci.tno.nl/gitlab/battlelab/simulation-rest-service/-/tree/master/packages/simulation-service/schemas/netn-etr; A report about the status of a task the unit was ordered to execute.",
 	"fields" : 
 	[
 		{

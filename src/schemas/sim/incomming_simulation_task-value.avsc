@@ -2,7 +2,7 @@
 	"type" : "record",
 	"name" : "SimulationTask",
 	"namespace" : "nl.ras.netn_etr",
-	"doc" : "Version 01/03/2020 -> copy of simulation_task",
+	"doc" : "Version 30 april 2020; Schema owner https://ci.tno.nl/gitlab/battlelab/simulation-rest-service/-/tree/master/packages/simulation-service/schemas/netn-etr",
 	"fields" : 
 	[
 		{
@@ -42,7 +42,7 @@
 								{
 									"name" : "TaskId",
 									"type" : "string",
-									"doc" : "Must be GUID Format! Identifies the task (TaskCounter/FederateHandle) TaskCounter shall be incremented by 1 for each sent task; FederateHandle handle that the federate get when joining the federation " 
+									"doc" : "Identifies the task (TaskCounter/FederateHandle) TaskCounter shall be incremented by 1 for each sent task; FederateHandle handle that the federate get when joining the federation " 
 								}, 
 								{
 									"name" : "Taskee",
@@ -52,7 +52,8 @@
 								{
 									"name" : "Tasker",
 									"type" : "string",
-									"doc" : "Must be GUID Format! Identifies the commander of the task."
+									"doc" : "Callsign",
+									"default": ""
 								}, 
 								{
 									"name" : "StartWhen",
@@ -88,6 +89,7 @@
 					},
 					{
 						"name" : "FireAtLocation",
+						"default": null,
 						"type" :
 						[
 							"null",
@@ -142,6 +144,7 @@
 					},
 					{
 						"name" : "MoveToLocation",
+						"default": null,
 						"type" : 
 						[ 
 							"null", 
@@ -182,6 +185,7 @@
 					}, 
 					{
 						"name" : "Mount",
+						"default": null,
 						"type" : 
 						[ 
 							"null", 
@@ -203,6 +207,7 @@
 					}, 
 					{
 						"name" : "Dismount",
+						"default": null,
 						"type" : 
 						[ 
 							"null", 

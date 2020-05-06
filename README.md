@@ -22,7 +22,7 @@ npm run build
 ## Docker
 
 ```bash
-npm run docker:silentproducer:build
+npm run docker:build:silentproducer
 ```
 
 This will create a docker local image with the name 'silent-producer'. See the `docker-compose.yml` for an example service configuration to add in your test-bed composition.
@@ -30,10 +30,10 @@ This will create a docker local image with the name 'silent-producer'. See the `
 To publish the local docker image to drivereu dockerhub:
 
 ```bash
-docker login --username=kluiverjh
-npm run docker:silentproducer:build
-npm run docker:silentproducer:tag
-npm run docker:silentproducer:publish
+docker login --username=<<GIT USERNAME e.g. kluiverjh>>
+npm run docker:build:silentproducer
+npm run docker:tag:silentproducer
+npm run docker:publish:silentproducer
 ```
 
 ## Usage
@@ -51,3 +51,9 @@ npm run silent-producer # To create some topics. Use CTRL-C to stop it.
 ```bash
 npm start
 ```
+
+
+
+## WARNING
+
+The .NET kafka adapter publish the kafka schema's (found no way to disable this)! When the schema matches the already published schema nothing happens, but when there are changes the schema version is update in the registry (even if the changes are in the documentation)!
