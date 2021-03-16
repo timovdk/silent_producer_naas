@@ -55,10 +55,14 @@ class Consumer {
   }
 
   private subscribe() {
-    this.adapter.on('message', message => this.handleMessage(message));
-    this.adapter.on('error', err => console.error(`Consumer received an error: ${err}`));
-    this.adapter.on('offsetOutOfRange', err => {
-      console.error(`Consumer received an offsetOutOfRange error on topic ${err.topic}.`);
+    this.adapter.on('message', (message) => this.handleMessage(message));
+    this.adapter.on('error', (err) =>
+      console.error(`Consumer received an error: ${err}`)
+    );
+    this.adapter.on('offsetOutOfRange', (err) => {
+      console.error(
+        `Consumer received an offsetOutOfRange error on topic ${err.topic}.`
+      );
     });
   }
 
@@ -68,13 +72,17 @@ class Consumer {
         return log.error(error);
       }
       if (results && results.length > 0) {
-        results.forEach(result => {
+        results.forEach((result) => {
           if (result.hasOwnProperty('metadata')) {
             console.log('TOPICS');
-            const metadata = (result as { [metadata: string]: { [topic: string]: ITopicMetadataItem } }).metadata;
+            const metadata = (result as {
+              [metadata: string]: { [topic: string]: ITopicMetadataItem };
+            }).metadata;
             for (let key in metadata) {
               const md = metadata[key];
-              console.log(`Topic: ${key}, partitions: ${Object.keys(md).length}`);
+              console.log(
+                `Topic: ${key}, partitions: ${Object.keys(md).length}`
+              );
             }
           } else {
             console.log('NODE');
@@ -86,16 +94,29 @@ class Consumer {
   }
 
   private handleMessage(message: IAdapterMessage) {
-    const stringify = (m: string | Object) => (typeof m === 'string' ? m : JSON.stringify(m, null, 2));
+    const stringify = (m: string | Object) =>
+      typeof m === 'string' ? m : JSON.stringify(m, null, 2);
     switch (message.topic.toLowerCase()) {
       case 'system_heartbeat':
-        log.info(`Received heartbeat message with key ${stringify(message.key)}: ${stringify(message.value)}`);
+        log.info(
+          `Received heartbeat message with key ${stringify(
+            message.key
+          )}: ${stringify(message.value)}`
+        );
         break;
       case 'standard_cap':
-        log.info(`Received CAP message with key ${stringify(message.key)}: ${stringify(message.value)}`);
+        log.info(
+          `Received CAP message with key ${stringify(message.key)}: ${stringify(
+            message.value
+          )}`
+        );
         break;
       default:
-        log.info(`Received ${message.topic} message with key ${stringify(message.key)}: ${stringify(message.value)}`);
+        log.info(
+          `Received ${message.topic} message with key ${stringify(
+            message.key
+          )}: ${stringify(message.value)}`
+        );
         break;
     }
   }

@@ -19,7 +19,7 @@ import * as amberAlert from './data/example_amber_alert.json';
 import * as earthquakeAlert from './data/example_earthquake.json';
 import * as thunderstormAlert from './data/example_thunderstorm.json';
 import * as homelandSecurityAlert from './data/example_homeland_security.json';
-import * as crowdTaskerMsg from '../data/geojson/crowdtasker.json';
+// import * as crowdTaskerMsg from '../data/geojson/crowdtasker.json';
 
 const log = Logger.instance;
 
@@ -44,8 +44,8 @@ class Producer {
       clientId: this.id,
       fetchAllSchemas: false,
       fetchAllVersions: false,
-      autoRegisterSchemas: true,
-      // autoRegisterSchemas: false,
+      // autoRegisterSchemas: true,
+      autoRegisterSchemas: false,
       wrapUnions: 'auto',
       schemaFolder: process.env.SCHEMA_FOLDER || `${process.cwd()}/src/schemas`,
       produce: [
@@ -59,13 +59,13 @@ class Producer {
         logToKafka: LogLevel.Warn,
       },
     });
-    this.adapter.on('error', e => console.error(e));
+    this.adapter.on('error', (e) => console.error(e));
     this.adapter.on('ready', () => {
       log.info(`Current simulation time: ${this.adapter.simulationTime}`);
       log.info('Producer is connected');
       this.sendStageChangeRequest();
       this.sendCap();
-      this.sendGeoJSON();
+      // this.sendGeoJSON();
       this.sendTime();
       if (hasLargeFileService) {
         this.uploadFile();
@@ -96,26 +96,26 @@ class Producer {
     });
   }
 
-  private sendGeoJSON() {
-    const geojson = geojsonToAvro(
-      (crowdTaskerMsg as unknown) as IFeatureCollection
-    );
-    const payloads: ProduceRequest[] = [
-      {
-        topic: 'standard_geojson',
-        messages: geojson,
-        attributes: 1, // Gzip
-      },
-    ];
-    this.adapter.send(payloads, (error, data) => {
-      if (error) {
-        log.error(error);
-      }
-      if (data) {
-        log.info(data);
-      }
-    });
-  }
+  // private sendGeoJSON() {
+  //   const geojson = geojsonToAvro(
+  //     (crowdTaskerMsg as unknown) as IFeatureCollection
+  //   );
+  //   const payloads: ProduceRequest[] = [
+  //     {
+  //       topic: 'standard_geojson',
+  //       messages: geojson,
+  //       attributes: 1, // Gzip
+  //     },
+  //   ];
+  //   this.adapter.send(payloads, (error, data) => {
+  //     if (error) {
+  //       log.error(error);
+  //     }
+  //     if (data) {
+  //       log.info(data);
+  //     }
+  //   });
+  // }
 
   private uploadFile() {
     const file = path.resolve(
@@ -205,7 +205,7 @@ export const largeFileUploadCallback = (
   title?: string,
   description?: string,
   dataType = DataType.other,
-  cb: (err: any, data?: ISendResponse) => void = err =>
+  cb: (err: any, data?: ISendResponse) => void = (err) =>
     err ? Logger.instance.error(err) : undefined
 ) => {
   return (err?: Error, url?: string) => {
