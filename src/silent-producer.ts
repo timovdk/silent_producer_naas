@@ -26,10 +26,10 @@ class SilentProducer {
       schemaFolder: process.env.SCHEMA_FOLDER || `${process.cwd()}/src/schemas`,
       logging: {
         logToConsole: LogLevel.Info,
-        logToKafka: LogLevel.Info,
+        logToKafka: LogLevel.Warn,
       },
     });
-    this.adapter.on('error', e => console.error(e));
+    this.adapter.on('error', (e) => console.error(e));
     this.adapter.on('ready', async () => {
       const createdTopics = await this.adapter.createTopics(
         this.adapter.uploadedSchemas
@@ -37,7 +37,7 @@ class SilentProducer {
       log.info(
         `Created the following topics:\n${createdTopics
           .sort()
-          .map(t => `- ${t}`)
+          .map((t) => `- ${t}`)
           .join('\n')}\n`
       );
       log.info('Exiting...');

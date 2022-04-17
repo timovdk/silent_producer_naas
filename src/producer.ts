@@ -30,11 +30,14 @@ class Producer {
   constructor() {
     const hasLargeFileService = false;
     this.adapter = new TestBedAdapter({
-      kafkaHost: process.env.KAFKA_HOST || 'localhost:3501',
-      schemaRegistry: process.env.SCHEMA_REGISTRY || 'localhost:3502',
+      kafkaHost: process.env.KAFKA_HOST || 'strategy.satways.net:3501',
+      schemaRegistry:
+        process.env.SCHEMA_REGISTRY || 'strategy.satways.net:3502',
       // kafkaHost: process.env.KAFKA_HOST || 'driver-testbed.eu:3501',
       // schemaRegistry: process.env.SCHEMA_REGISTRY || 'driver-testbed.eu:3502',
-      largeFileService: hasLargeFileService ? 'localhost:9090' : undefined,
+      largeFileService: hasLargeFileService
+        ? 'strategy.satways.net:9090'
+        : undefined,
       // sslOptions: {
       //   pfx: fs.readFileSync('../certs/other-tool-1-client.p12'),
       //   passphrase: 'changeit',

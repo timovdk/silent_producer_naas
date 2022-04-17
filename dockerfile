@@ -5,9 +5,7 @@
 # To start it stand-alone:
 #   docker run -it silent-producer
 
-FROM node:12-alpine as builder
-# Install yarn and other dependencies via apk
-RUN apk update && apk add yarn python make g++ && rm -rf /var/cache/apk/*
+FROM nikolaik/python-nodejs as builder
 RUN mkdir -p ./code
 COPY package.json /code/package.json
 WORKDIR /code
@@ -16,7 +14,7 @@ COPY ./tsconfig.json .
 COPY ./src/silent-producer.ts ./src/silent-producer.ts
 RUN npm run build
 
-FROM node:12-alpine
+FROM node:16-alpine
 RUN mkdir -p /app
 WORKDIR /app
 COPY ./src/schemas ./src/schemas
