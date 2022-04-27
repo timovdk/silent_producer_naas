@@ -4,7 +4,7 @@
   "description": "An example project of how to use the node-test-bed-adapter",
   "main": "dist/producer.js",
   "typings": "dist/producer.d.ts",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "start": "tsc -w",
     "build": "tsc -b",
@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/DRIVER-EU/example-node-test-bed-adapter#readme",
   "dependencies": {
-    "node-test-bed-adapter": "^2.2.3"
+    "node-test-bed-adapter": "^2.2.5"
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.8",
