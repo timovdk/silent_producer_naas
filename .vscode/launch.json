@@ -10,7 +10,8 @@
       "name": "Run producer",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/src/producer.ts",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "runtimeArgs": ["--experimental-json-modules"]
     },
     {
       "type": "pwa-node",

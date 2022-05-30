@@ -16,15 +16,16 @@ import {
 const log = Logger.instance;
 
 class Consumer {
-  private id = 'tno';
+  private id = 'tno-consumer';
   private adapter: TestBedAdapter;
 
   constructor() {
     this.adapter = new TestBedAdapter({
-      kafkaHost: process.env.KAFKA_HOST || 'localhost:3501',
-      schemaRegistry: process.env.SCHEMA_REGISTRY || 'localhost:3502',
-      // kafkaHost: 'driver-testbed.eu:3501',
-      // schemaRegistry: 'driver-testbed.eu:3502',
+      // kafkaHost: process.env.KAFKA_HOST || 'localhost:3501',
+      // schemaRegistry: process.env.SCHEMA_REGISTRY || 'localhost:3502',
+      kafkaHost: process.env.KAFKA_HOST || 'strategy.satways.net:3501',
+      schemaRegistry:
+        process.env.SCHEMA_REGISTRY || 'strategy.satways.net:3502',
       fetchAllSchemas: false,
       fetchAllVersions: false,
       wrapUnions: true,
@@ -75,9 +76,11 @@ class Consumer {
         results.forEach((result) => {
           if (result.hasOwnProperty('metadata')) {
             console.log('TOPICS');
-            const metadata = (result as {
-              [metadata: string]: { [topic: string]: ITopicMetadataItem };
-            }).metadata;
+            const metadata = (
+              result as {
+                [metadata: string]: { [topic: string]: ITopicMetadataItem };
+              }
+            ).metadata;
             for (let key in metadata) {
               const md = metadata[key];
               console.log(

@@ -15,26 +15,26 @@ import {
   RequestChangeOfTrialStage,
   geojsonToAvro,
 } from 'node-test-bed-adapter';
-import * as amberAlert from './data/example_amber_alert.json';
-import * as earthquakeAlert from './data/example_earthquake.json';
-import * as thunderstormAlert from './data/example_thunderstorm.json';
-import * as homelandSecurityAlert from './data/example_homeland_security.json';
+import amberAlert from './data/example_amber_alert.json' assert { type: 'json' };
+import earthquakeAlert from './data/example_earthquake.json' assert { type: 'json' };
+import thunderstormAlert from './data/example_thunderstorm.json' assert { type: 'json' };
+import homelandSecurityAlert from './data/example_homeland_security.json' assert { type: 'json' };
 // import * as crowdTaskerMsg from '../data/geojson/crowdtasker.json';
 
 const log = Logger.instance;
 
 class Producer {
-  private id = 'tno';
+  private id = 'tno-producer';
   private adapter: TestBedAdapter;
 
   constructor() {
     const hasLargeFileService = false;
     this.adapter = new TestBedAdapter({
+      // kafkaHost: process.env.KAFKA_HOST || 'localhost:3501',
+      // schemaRegistry: process.env.SCHEMA_REGISTRY || 'localhost:3502',
       kafkaHost: process.env.KAFKA_HOST || 'strategy.satways.net:3501',
       schemaRegistry:
         process.env.SCHEMA_REGISTRY || 'strategy.satways.net:3502',
-      // kafkaHost: process.env.KAFKA_HOST || 'driver-testbed.eu:3501',
-      // schemaRegistry: process.env.SCHEMA_REGISTRY || 'driver-testbed.eu:3502',
       largeFileService: hasLargeFileService
         ? 'strategy.satways.net:9090'
         : undefined,
