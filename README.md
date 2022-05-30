@@ -10,13 +10,27 @@ The example performs the following actions:
 - `producer.ts`: Upload the AVRO schemas from the `src/schemas` folder to the [Kafka schema registry](http://localhost:3601) (note that this is not required during production, when the test-bed admin tool takes over this role, so use it only once after starting the Docker-based test-bed to register all schemas). You can turn it off by settings `autoRegisterSchemas: false`.
 - `producer.ts`: Send 4 CAP messages to the test-bed. You can inspect them by visiting the [Kafka topics UI](http://localhost:3600).
 - `silent-producer.ts`: Uploads schema's from the `SCHEMA_FOLDER` environment variable (or from the docker image), and creates topics on the test-bed without sending data to those topics. You can inspect them by visiting the [Kafka topics UI](http://localhost:3600). There is also a docker image you can use, `drivereu/silent-producer:v2.0.0`.
-- `consumer.ts`: Receive CAP messages and log them to screen.
+- `consumer.ts`: Receives CAP messages and log them to screen.
 
 ## Installation
+
+Assuming you have Node.js 16 or another recent version running, you should install the dependencies and build it:
 
 ```bash
 npm i
 npm run build
+# npm start  # If you are developping/debugging
+```
+
+## Running
+
+In the `.env` file, you need to specify the URL of the Kafka broker and the schema registry (see `.env.example`), or you can manually edit it in the configuration of the `consumer.ts` and `producer.ts` file. If you are using vscode, you can use the debugger to first launch the producer and next the consumer in order to test it.
+
+Alternatively, you can run it manually using node (v16):
+
+```bash
+node --experimental-json-modules dist/producer.js
+node dist/consumer.js
 ```
 
 ## Docker
